@@ -27,11 +27,11 @@ public:
         
         vector<vector<int>>ans;
         for(auto p:nodes){
-            vector<int>level;
+            vector<int>col;
             for(auto q:p.second){
-                level.insert(level.end(),q.second.begin(),q.second.end());// why insert is used do a dry run why push_back is not working here
+                col.insert(col.end(),q.second.begin(),q.second.end());// why insert is used do a dry run why push_back is not working here
             }
-            ans.push_back(level);
+            ans.push_back(col);
         }
         return ans;
     }
