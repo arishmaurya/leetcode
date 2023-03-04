@@ -5,8 +5,7 @@ public:
        
         int num1;
         int num2;
-        
-        int sum=0;
+      
         int n=s.size();
         sort(s.begin(),s.end());
          string str2=""; 
@@ -17,7 +16,7 @@ public:
    
         num1=stoi(str1); 
         num2=stoi(str2);
-        sum=num1+ num2;
-        return sum;
+        
+        return num1+ num2;
     }
 };
