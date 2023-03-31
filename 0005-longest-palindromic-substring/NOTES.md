@@ -1,1 +1,1 @@
-​
+it  can also be done using longest common substring approach we just have to make another string by reversing one string follow dp 27 of strivers playlist
