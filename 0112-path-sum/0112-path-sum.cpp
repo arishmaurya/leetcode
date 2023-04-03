@@ -11,28 +11,9 @@
  */
 class Solution {
 public:
-   int tS;
-bool check(TreeNode *node, int Sum)
-{
-
-    if (not node)
-        return false;
-    if (not node->left and not node->right and (node->val + Sum == tS))
-        return true;
-
-    int ans = 0;
-    if (node->right)
-        ans = ans or check(node->right, Sum + node->val);
-    if (ans)
-        return ans;
-    if (node->left)
-        ans = ans or check(node->left, node->val + Sum);
-    return ans;
-}
-bool hasPathSum(TreeNode *root, int targetSum)
-{tS=targetSum;
-int Sum=0;
-return check(root, Sum);
-    
-}
+    bool hasPathSum(TreeNode* root, int sum) {
+        if(root == NULL) return false;
+        if(sum == root->val && root->left == NULL && root->right == NULL) return true;
+        return hasPathSum(root->left, sum - root->val) or hasPathSum(root->right, sum - root->val);
+    }
 };
